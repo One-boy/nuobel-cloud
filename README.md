@@ -26,7 +26,7 @@
 
 ## 体验地址：
 ```
-https://cloud.nuobel.com
+https://cloud.nuobel.com，目前域名备案中，请稍等。。。
 ```
 ## 体验账号:
 ```
