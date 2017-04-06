@@ -1,0 +1,40 @@
+
+body,div,p,ul,a,video{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 20px;
+	font-family: "Microsoft YaHei";
+}
+.header{
+	height: 2.5rem;
+	/*border-bottom: 1px solid #E4E4E4;*/
+	min-width: 25rem;
+	box-shadow: 0px 3px 6px rgb(204, 204, 204);
+	position: fixed;
+	top: 0;
+	z-index: 16;
+	width: 100%;
+	background-color: #fff;
+}
+
+.logo{
+	float: left;
+	cursor: pointer;
+	height: 2.5rem;
+	padding: .2rem;
+}
+.logo>img{
+	height: 100%;
+}
+
+.logo_desc{
+	display: block;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	font-weight: bold;
+	float: left;
+	color: #666;
+}

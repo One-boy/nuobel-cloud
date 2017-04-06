@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的网盘</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/nuobel_public.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nuobel_index.css">
+</head>
+<body>
+    <div class="index_header">
+        <a class="logo" href="/">
+            <img src="/static/img/logo.png">
+        </a>
+        <span class="logo_desc"><i>我的在线网盘</i></span>
+        <div class="index_user" id="index_user_box">
+            <span>欢迎你</span>
+            <span id="index_name">未知</span>
+            <div class="user_pop" id="user_pop">
+                <div class="top_arrows"></div>
+                <span id="exit"> 退出</span>
+            </div>
+        </div>
+    </div>
+    <div class="left_box">
+        <div class="left_upload_box">
+            <div class="div_input">
+                <input type="file" multiple id="upload_input" title="点击上传" name="uploadfile">
+            </div>
+            <div class="upload_text">
+                <span>+</span>
+                <span>上传</span>
+            </div>
+        </div>
+        <ul class="dir_list" id="left_file_type">
+            <li class="checked"><a href="#" data-type="all" title="全部文件"><i class="iconfont">&#xe68d;</i>全部文件</a></li>
+            <li><a href="#" data-type="doc" title="文档"><i class="iconfont">&#xe6b7;</i>文档</a></li>
+            <li><a href="#" data-type="video" title="视频"><i class="iconfont">&#xe687;</i>视频</a></li>
+            <li><a href="#" data-type="image" title="图片"><i class="iconfont">&#xe64e;</i>图片</a></li>
+            <li><a href="#" data-type="music" title="音乐"><i class="iconfont">&#xe684;</i>音乐</a></li>
+        </ul>
+    </div>
+    <div class="top_box">
+        <div class="tool_box" id="tool_box">
+            <span action="makedir"><i class="iconfont" action="makedir">&#xe684;</i>新建文件夹</span>
+            <span action="download"><i class="iconfont" action="download">&#xe684;</i>下载</span>
+             <span action="rename"><i class="iconfont" action="rename">&#xe684;</i>重命名</span>
+            <span action="delete"><i class="iconfont" action="delete">&#xe654;</i>删除</span>
+            <span action="refresh"><i class="iconfont" action="refresh">&#xe617;</i>刷新</span>
+        </div>
+    </div>
+
+    <div class="content_box" id="list_content">
+        <div class="path_box">
+            <div class="all_check">
+                <input type="checkbox" id="checkall" name="checkall" class="check_box_input">
+            </div>
+            <div class="content_path" id="history_path">
+                <span title="">全部文件</span>
+            </div>
+        </div>
+        <div class="inner_box">
+            <div id="content_file">
+            </div>
+        </div>
+    </div>
+
+    <!--上传进度-->
+    <div class="upload_box">
+        <div class="upload_title">
+            <span class="upload_status">上传状态</span>
+            <span class="upload_open" id="open_statusbox">-</span>
+        </div>
+        <div class="upload_detail">
+            <div class="status_bar">
+                <span>名称</span>
+                <span>状态</span>
+                <span>大小</span>
+                <span>目的地</span>
+            </div>
+            <div class="detail_box" id="detail_row">
+              
+            </div>
+        </div>
+    </div>
+    <!---新建文件夹弹出框-->
+    <div class="pop_box" >
+        <div class="pop_content">
+            <div class="pop_title" >请输入文件夹名称</div>
+            <div class="pop_input">
+                <input type="text" id="newdirname">
+            </div>
+            <div class="pop_btn_box" id="pop_btn">
+                <div class="pop_btn btn_cancel" action="cancel">取消</div>
+                <div class="pop_btn btn_ok" action="make">确定</div>
+            </div>
+        </div>
+    </div>
+    <!--提示信息-->
+    <div class="top_tips" id="tips_display">
+        <span>!</span><i id="tips_content">你还未选择任何文件<i>
+    </div>
+    <!---图片预览-->
+    <div class="imgview_box" >
+        <div class="imgview_header" id="imgview_action">
+            <div class="imgview_title"></div>
+            <span class="imgview_tool imgview_close" action="close">×</span>
+            <span class="imgview_tool imgview_down" action="down">下载</span>
+             <span class="imgview_tool imgview_rotate" action="rotate">右转90度</span>
+        </div>
+        <div id="imgview_view">
+            
+        </div>
+        <div class="imgview_loding">
+            图片加载中,请稍后...
+        </div>
+    </div>
+    <!---音乐预览-->
+    <div class="musicview_box" >
+       <div class="imgview_header" id="musicview_action">
+            <div class="imgview_title"></div>
+            <span class="imgview_tool imgview_close" action="close">×</span>
+            <span class="imgview_tool imgview_down" action="down">下载</span>
+        </div>
+        <div id="musicview_view">
+        </div>
+    </div>
+    <!---视频预览-->
+    <div class="videoview_box" >
+       <div class="imgview_header" id="videoview_action">
+            <div class="imgview_title"></div>
+            <span class="imgview_tool imgview_close" action="close">×</span>
+            <span class="imgview_tool imgview_down" action="down">下载</span>
+        </div>
+        <div id="videoview_view">
+        </div>
+    </div>
+</body>
+<script src="/static/js/nuobel_public.js"></script>
+<script src="/static/js/nuobel_index.js"></script>
+
+</html>

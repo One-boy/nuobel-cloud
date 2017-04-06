@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+/*样式重置*/
+ *{margin:0;padding:0;box-sizing: border-box;}
+
+html{
+    font-size: 12px;
+    
+}
+ html,body{
+     height: 100%;
+ }
+
+ body{
+     background-color: #fff;
+     background-image: url(../img/cxxs.jpg);
+     background-size: 100% auto;
+     overflow-x: hidden;
+     overflow-y: scroll;
+ }
+ header{
+     height: 4rem;
+     border-bottom: 1px solid #fff;
+ }
+ header ul li{
+     list-style: none;
+     float: right;
+     margin-right: 1rem;
+ }
+ header ul li a{
+     text-decoration: none;
+     line-height: 4rem;
+     color: #fff;
+     font-size: 1.6rem;
+     cursor: pointer;
+ }
+ .abount_us{
+     position: fixed;
+     z-index: 1002;
+     right: 0;
+     top: 0;
+     width: 10rem;
+     top: 4rem;
+     height: 100%;
+     border-left: 1px solid #fff;
+     transform:translateX(10rem);
+     transition: all .35s;
+     background: #fff;
+ }
+ header ul li:first-of-type:hover .abount_us{
+     transform:translateX(0);
+ }
+
+ .content{
+     color: #fff;
+ }
+ .content .inner{
+     width: 50rem;
+     /*border:1px solid #fff;*/
+     text-align: center;
+     margin: 10% auto;
+     
+ }
+.inner h2{
+    line-height: 4rem;
+    font-size: 2rem;
+}
+.inner p{
+    line-height: 3rem;
+    font-size: 1.6rem;
+}
+ .inner .app_box{
+     padding:1rem;
+ }
+ .app_box{
+     perspective: 5000px;
+     /*transform-style: preserve-3d;*/
+ }
+ /*清除浮动，占位*/
+.app_box::after{
+    content: "";
+    height: 0;
+    clear: both;
+    display: block;
+}
+.app_box .app{
+    display: block;
+    float: left;
+    width: 14.5rem;
+    height: 10rem;
+    position: relative;
+    background-color:#fff;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    /*overflow: hidden;*/
+    z-index: 1000;   
+    border-radius: .5rem;
+    cursor: pointer;
+    font: 1.2rem/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    transition: all .35s linear;
+    text-decoration: none;
+   
+}
+
+.netdisk{
+    background: url(../img/nuobel.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    text-align: left;
+    color: #fff;
+    overflow: hidden;
+}
+.netdisk span{
+    display: inline-block;
+    padding: .5rem;
+    background: orangered;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    transform: translateX(-14.5rem);
+    transition: all .35s;
+    
+}
+.netdisk:hover{
+    background-color: rgba(255,255,255,.6);
+}
+.netdisk:hover span{
+    transform: translateX(0);
+}
+.netdisk span:nth-of-type(1){
+    transition-delay: .05s;
+}
+.netdisk span:nth-of-type(2){
+    transition-delay: .1s;
+}
+.netdisk span:nth-of-type(3){
+    transition-delay: .15s;
+}
+.css3demo{
+    background-image: url(../img/css3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    text-align: center;
+    overflow: hidden;
+}
+.css3demo:hover{
+    background-color: rgba(255,255,255,.4);
+}
+.css3demo:hover h3,.css3demo:hover p{
+    color: #fff;
+    background: orangered;
+    transform: translateY(0);
+}
+.css3demo h3,.css3demo p{
+    color: #58423a;
+    font-size: 2rem;
+    transform: translateY(-10rem);
+    transition: all .35s linear;
+    text-decoration: none;
+}
+.css3demo p{
+    font-size: 1.6rem;
+}
+
+.canvas h3,.canvas p{
+    color: #3F51B5;
+    text-align: center;
+    margin-top: 1.3rem;
+    transition: all .35s linear;
+}
+.canvas:hover{
+    background: rgba(255,255,255,.5);
+}
+.canvas:hover h3,.canvas:hover p{
+    transform: scaleX(1.2);
+    opacity: .6;
+}
+.svg{
+    color: #000;
+    /*border:1px solid red;*/
+    transform-style: preserve-3d;
+    /*opacity: 0; */
+    position: relative;
+    background: rgba(255,255,255,0) !important;
+    /*overflow: normal !important;*/
+}
+.svg .front{
+    /*border:1px solid blue;*/
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(5rem);
+    border-radius: .5rem;
+    background: #fff;
+}
+.svg .back{
+    /*border:1px solid green;*/
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(-90deg) translateZ(5rem) ;
+    background: orangered;
+    color: #fff;
+    border-radius: .5rem;
+    opacity: 0;
+    transition: all .35s linear;
+} 
+.svg:hover{
+    transform: rotateX(90deg) ;
+}
+.svg:hover .back{
+    opacity: 1;
+}
