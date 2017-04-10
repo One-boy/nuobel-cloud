@@ -13,6 +13,8 @@ func main() {
 	//登录
 	http.HandleFunc("/", controllers.OnHome)
 	http.HandleFunc("/nuobel", controllers.OnIndex)
+	//关于我
+	http.HandleFunc("/aboutme", controllers.OnAboutme)
 	http.HandleFunc("/nuobel/login", controllers.OnLogin)
 	//register
 	http.HandleFunc("/nuobel/register", controllers.OnRegister)

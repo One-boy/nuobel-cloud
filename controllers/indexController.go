@@ -25,9 +25,20 @@ func OnIndex(w http.ResponseWriter, r *http.Request) {
 		temp, err := template.ParseFiles("views/nuobel_index.html")
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
 		}
 		temp.Execute(w, nil)
 	}
+}
+
+//aboutme
+func OnAboutme(w http.ResponseWriter, r *http.Request) {
+	temp, err := template.ParseFiles("views/aboutme.html")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	temp.Execute(w, nil)
 }
 
 //getuserinfo

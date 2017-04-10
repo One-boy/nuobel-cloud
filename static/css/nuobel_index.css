@@ -59,7 +59,9 @@
     -ms-transition: all .5s ease;
     background-color: #fff;
     border-radius: 5px;
+    overflow: hidden;
 }
+
 .user_pop>span{
     font-size: .75rem;
     display: block;

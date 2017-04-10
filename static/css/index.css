@@ -14,9 +14,8 @@ html{
  body{
      background-color: #fff;
      background-image: url(../img/cxxs.jpg);
-     background-size: 100% auto;
-     overflow-x: hidden;
-     overflow-y: scroll;
+     background-size: 100% 100%;
+     overflow: hidden;
  }
  header{
      height: 4rem;
@@ -33,22 +32,6 @@ html{
      color: #fff;
      font-size: 1.6rem;
      cursor: pointer;
- }
- .abount_us{
-     position: fixed;
-     z-index: 1002;
-     right: 0;
-     top: 0;
-     width: 10rem;
-     top: 4rem;
-     height: 100%;
-     border-left: 1px solid #fff;
-     transform:translateX(10rem);
-     transition: all .35s;
-     background: #fff;
- }
- header ul li:first-of-type:hover .abount_us{
-     transform:translateX(0);
  }
 
  .content{

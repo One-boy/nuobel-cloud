@@ -783,7 +783,7 @@ function uploadFileHandle() {
         var fd = new FormData();
         fd.append("fielnames", file);
         var obj = {
-            url: "/uploadfile?path=" + filepath,
+            url: "uploadfile?path=" + filepath,
             data: fd,
             id: div.id,
             callback: function (resp, id) {
