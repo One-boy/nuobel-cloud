@@ -196,3 +196,11 @@ html{
 .svg:hover .back{
     opacity: 1;
 }
+
+.beian{
+    text-align: center;
+}
+.beian a{
+    color: #fff;
+    text-decoration: none;
+}
