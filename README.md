@@ -25,7 +25,7 @@
 - 可在线浏览文档
 
 ## 体验地址：
-[临时体验](http://118.89.104.190:4005/nuobel/login)
+[临时体验](http://www.nuobel.com/nuobel/login)
 ## 体验账号:
 ```
 账号：test 密码：test
